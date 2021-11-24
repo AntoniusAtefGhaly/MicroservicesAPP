@@ -1,0 +1,41 @@
+///////////////mongo command////////////////////
+to use mongo command 
+-mongo
+-show dbs
+-db.createCollection('Products')
+-db.Products.insertMany([
+{"Name": "Asus Laptop", "Category": "Computers", "Summary": "Summary", "Description": "Description", "ImageFile": "ImageFile", "Price": 54.93},
+{"Name" : "HP Laptop", "Category": "Computers", "Summary": "Summary", "Description": "Description", "ImageFile": "ImageFile", "Price": 88.93}])
+
+-db.products.find({}).pretty()
+
+////////////////////////////redis///////////////////////////////
+redis-cli
+ping
+set key value
+
+////////////////////////////docker///////////////////////////////
+docker-compose -f -f up -d
+-docker ps
+-docker pull redis
+//run image on spesific port
+docker run -d -p 6379:6379 --name redisdb redis
+///logs files
+docker logs -f redisdb
+//execute imag
+docker exec -it catalogdb /bin/bash
+//remove image
+docker rmi 
+
+//////////rabbitmq/////////
+$ docker run -d --hostname my-rabbit --name some-rabbit -p 15672:15672 -p 5672:5672  rabbitmq:3-management 
+
+////////sql//////////////
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Pass@1234" -p 1433:1433 -d mcr.microsoft.com/mssql/server
+docker exec -it crazy_zhukovsky /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pass@1234
+ 
+must write port after the localhost,1433
+
+//docker error reset
+gpupdate /force
+Pass@1234

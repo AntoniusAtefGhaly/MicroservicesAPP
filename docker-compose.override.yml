@@ -12,7 +12,16 @@ services:
     container_name: basketdb
     restart: always
     ports:
-        - "6379:27017"
+        - "6379:6379"
+  orderdb:
+    container_name: orderdb
+    restart: always
+    ports:
+        - "1433:1433"
+    environment:
+            SA_PASSWORD: "Pass@1234"
+            ACCEPT_EULA: "Y"
+
   rabbitmq:
     container_name: rabbitmq
     restart: always
@@ -44,3 +53,12 @@ services:
         - ${HOME}/.aspnet/https:/root/.aspnet/https
     ports:
       - "8001:80"
+  ordering.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:OrderConnection=Server=orderdb,1433;Database=OrderDB;User Id=sa;Password=Pass@1234;"
+      - "EventBus:HostName=rabbitmq"
+    depends_on:
+      - orderdb
+    ports:
+      - "8002:80"

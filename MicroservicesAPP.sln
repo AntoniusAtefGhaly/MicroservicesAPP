@@ -21,13 +21,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBusRabbitMQ", "src\Com
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{84BD13B8-6249-428D-911F-B67F468FCE5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Api", "src\Ordering\Ordering.Api\Ordering.Api.csproj", "{BD1394EA-D019-4574-A1B2-3D54BDF6885C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Api", "src\Ordering\Ordering.Api\Ordering.Api.csproj", "{BD1394EA-D019-4574-A1B2-3D54BDF6885C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Core", "src\Ordering\Ordering.Core\Ordering.Core.csproj", "{7E5ACB0F-9834-4CD9-ADCB-434E7A4B6A6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Core", "src\Ordering\Ordering.Core\Ordering.Core.csproj", "{7E5ACB0F-9834-4CD9-ADCB-434E7A4B6A6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Application", "src\Ordering\Ordering.Application\Ordering.Application.csproj", "{A6DAE29C-9061-4404-83C5-07612DCB4BA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Application", "src\Ordering\Ordering.Application\Ordering.Application.csproj", "{A6DAE29C-9061-4404-83C5-07612DCB4BA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Infrastrcture", "src\Ordering\Ordering.Infrastrcture\Ordering.Infrastrcture.csproj", "{885C286F-6415-41FB-8096-1946FA3CDE04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Infrastrcture", "src\Ordering\Ordering.Infrastrcture\Ordering.Infrastrcture.csproj", "{885C286F-6415-41FB-8096-1946FA3CDE04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
