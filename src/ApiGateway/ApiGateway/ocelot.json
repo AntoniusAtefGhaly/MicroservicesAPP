@@ -3,13 +3,12 @@
     //catalog api
     //get/put/post
     {
-
       "DownstreamPathTemplate": "/api/v1/Catalog",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "port": "8000"
+          "Host": "catalog.api",
+          "port": "80"
         }
       ],
       "UpstreamPathTemplate": "/catalog",
@@ -21,7 +20,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalogapi",
+          "Host": "catalog.api",
           "port": "80"
         }
       ],
@@ -34,7 +33,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalogapi",
+          "Host": "catalog.api",
           "port": "80"
         }
       ],
@@ -47,7 +46,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalogapi",
+          "Host": "catalog.api",
           "port": "80"
         }
       ],
@@ -61,7 +60,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basketapi",
+          "Host": "basket.api",
           "port": "80"
         }
       ],
@@ -74,7 +73,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basketapi",
+          "Host": "basket.api",
           "port": "80"
         }
       ],
@@ -100,7 +99,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basketapi",
+          "Host": "basket.api",
           "port": "80"
         }
       ],
@@ -109,16 +108,28 @@
     },
     //ORDER api
     {
-      "DownstreamPathTemplate": "/api/v1/Order",
+      "DownstreamPathTemplate": "/api/Ordering?userName={userName}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "orderapi",
+          "Host": "ordering.api",
+          "port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/order?userName={userName}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Ordering",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ordering.api",
           "port": "80"
         }
       ],
       "UpstreamPathTemplate": "/order",
-      "UpstreamHttpMethod": [ "GET", "POST" ]
+      "UpstreamHttpMethod": [ "POST" ]
     }
  ]
 }

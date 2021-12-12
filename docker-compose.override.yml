@@ -30,6 +30,7 @@ services:
         - "15672:15672"
 
   catalog.api:
+    container_name: catalog.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - "CatalogDatabaseSettings:ConnectionString=mongodb://catalogdb:27017"
@@ -42,6 +43,7 @@ services:
       - "8000:80"
 
   basket.api:
+    container_name: basket.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - "ConnectionStrings:Redis=basketdb:6379"
@@ -54,6 +56,7 @@ services:
     ports:
       - "8001:80"
   ordering.api:
+    container_name: ordering.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - "ConnectionStrings:OrderConnection=Server=orderdb,1433;Database=OrderDB;User Id=sa;Password=Pass@1234;"
@@ -63,6 +66,7 @@ services:
     ports:
       - "8002:80"
   apigateway:
+    container_name: apigateway
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     depends_on:
