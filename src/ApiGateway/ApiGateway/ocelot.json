@@ -64,7 +64,7 @@
           "port": "80"
         }
       ],
-      "UpstreamPathTemplate": "/basket?userName={userName}",
+      "UpstreamPathTemplate": "/basket/{userName}",
       "UpstreamHttpMethod": [ "GET" ]
     },
     //post
@@ -86,7 +86,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basketapi",
+          "Host": "basket.api",
           "port": "80"
         }
       ],
@@ -116,7 +116,7 @@
           "port": "80"
         }
       ],
-      "UpstreamPathTemplate": "/order?userName={userName}",
+      "UpstreamPathTemplate": "/order/{userName}",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
