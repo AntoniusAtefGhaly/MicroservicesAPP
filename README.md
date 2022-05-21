@@ -1,3 +1,3 @@
-# Microservices couse project
+# Microservices course project
 Udemy course url:
 https://www.udemy.com/course/microservices-architecture-and-implementation-on-dotnet/ 
